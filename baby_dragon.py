@@ -7,21 +7,29 @@ def load_image(name, colorkey=None):
     try:
         image = pygame.image.load(name)
     except pygame.error:
-        print("Whoops! I'm unable to load: ", name, " sorry about that
-        
+        print("Whoops! I'm unable to load: ", name, " sorry about that")
+
+    image = image.convert()
+
+    return image, image.get_rect()
+
+
 # Parent Class
 class Dragon(pygame.sprite.Sprite):
-    def __init__(self):
-        # self.name = name
-        # self.snuggled = snuggled
-        # self.sleep = sleep
-        # self.hunger = hunger
-        # self.cloaca = cloaca
-        # self.fire = fire
-        # self.energy = energy
-        # self.maturity = maturity
+
+    def __init__(self, name, snuggled,
+        sleep, hunger, cloaca, fire, energy, maturity):
+        pygame.sprite.Sprite.__init__(self)
+        self.name = name
+        self.snuggled = snuggled
+        self.sleep = sleep
+        self.hunger = hunger
+        self.cloaca = cloaca
+        self.fire = fire
+        self.energy = energy
+        self.maturity = maturity
         # pygame instance attributes.
-        self.image, self.rect = load_image('baby_dragon_by_kaitlynclinkscales-d55vsza.png', -1)
+        self.image, self.rect = load_image('baby_dragon_by_kaitlynclinkscales-d55vsza.jpg', -1)
         screen = pygame.display.get_surface()
         self.area = screen.get_rect()
         self.STEP = 9
