@@ -4,4 +4,11 @@
 # Parent Class
 class Dragon:
     def __init__(self, name, snuggled, sleep, hunger, cloaca, fire, energy, maturity):
-        pass
+        self.name = name
+        self.snuggled = snuggled
+        self.sleep = sleep
+        self.hunger = hunger
+        self.cloaca = cloaca
+        self.fire = fire
+        self.energy = energy
+        self.maturity = maturity
