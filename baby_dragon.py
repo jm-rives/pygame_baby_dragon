@@ -51,3 +51,20 @@ def main():
     clock = pygame.time.Clock()
     dragon = Dragon()
     sprite = pygame.sprite.RenderPlain(dragon)
+
+    while True:
+        clock.tick(60)
+
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                return
+
+        sprite.update()
+
+        screen.blit(background, (0, 0))
+        sprite.draw(screen)
+        pygame.display.flip()
+
+
+if __name__ == '__main__':
+    main()
