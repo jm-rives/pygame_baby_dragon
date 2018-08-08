@@ -3,4 +3,5 @@
 
 # Parent Class
 class Dragon:
-    pass
+    def __init__(self, name, snuggled, sleep, hunger, cloaca, fire, energy, maturity):
+        pass
