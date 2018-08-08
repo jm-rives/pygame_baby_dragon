@@ -49,7 +49,7 @@ def main():
     pygame.display.flip()
 
     clock = pygame.time.Clock()
-    dragon = Dragon()
+    dragon = Dragon('Timmy', 5, 5, 0, 0, 0, 5, 5)
     sprite = pygame.sprite.RenderPlain(dragon)
 
     while True:
