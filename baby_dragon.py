@@ -26,3 +26,6 @@ class Dragon:
         self.ystep = 0
         self.degrees = 0
         self.direction = 'right'
+
+def main():
+    pass
